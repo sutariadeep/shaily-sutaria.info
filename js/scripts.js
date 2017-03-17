@@ -22,7 +22,7 @@ window.onload = function() {
     'I\'m Deep',
     'Nice to see you here! 😃',
     'I am passionate about using tech for social good 🌏',
-    'And I am currently working as a Software Engineer at Dell ',
+    'And I am currently working as a Software Engineer at Netskope ',
     'Want to know more about me? <br> Visit my full website <a href = "resume/index.html" target="_blank" href="home/index.html">here</a> 🔍',
     'or email me at sutariadeep[at]gmail.com 📥',
     getCurrentTime(),
