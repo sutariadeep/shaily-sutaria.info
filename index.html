@@ -1,32 +1,903 @@
-<!doctype html>
-<title>Deep Sutaria</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="description" content="I design and code things on the web." />
 
-<meta name="description" content="Manu Chopra is a junior at Stanford University majoring in Computer Science and is interested in using technology to improve human lives">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>Shaily Sutaria</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<meta name="keywords" content="manu, chopra, stanford, manu chopra, anti molestation device, cs, computers, code, artificial intelligence, cs+social good, cs90si, tech for good, social impact">
-<meta name="author" content="Manu Chopra">
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="768" />
-<meta property="og:image:height" content="416" />
-<link rel="icon" type="image/png" href="img/favicon.png" />
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
-<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-<body>
-  <div class="messages"></div>
-  <script src="js/anime.js"></script>
-  <script src="js/scripts.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+body {
+  color: #444;
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+}
 
-  ga('create', 'UA-52739034-1', 'auto');
-  ga('send', 'pageview');
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-</script>
+section {
+  position: relative;
+  width: 100%;
+}
+
+/*##### HERO SECTION #####*/
+.hero {
+  height: 100%;
+  background: url("https://source.unsplash.com/a2NRu2Wxa2o/");
+  background-size: cover;
+  background-position: center;
+}
+.hero .content {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.hero .content .header {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+.hero .content .header h1 {
+  color: #fff;
+  font-size: 2.5em;
+  text-shadow: 0px 2px 3px #2d2d2d;
+}
+
+/*##### ABOUT MYSELF SECTION #####*/
+.about-myself {
+  padding: 50px 20px;
+}
+.about-myself .content {
+  text-align: center;
+}
+.about-myself .content h2 {
+  color: #3d3d3d;
+  font-size: 3em;
+  margin-bottom: 20px;
+  -webkit-transform: translateY(-50px) scale(0);
+  transform: translateY(-50px) scale(0);
+  -webkit-transition: transform .7s;
+  -moz-transition: transform .7s;
+  transition: transform .7s;
+}
+.about-myself .content .aboutTitleVisible {
+  -webkit-transform: translateY(0px) scale(1);
+  transform: translateX(0px) scale(1);
+}
+.about-myself .content p span {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+
+/*##### EXPERIENCE SECTION #####*/
+.experience {
+  background: #002440;
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+.experience .content {
+  text-align: center;
+}
+.experience .content h1 {
+  font-size: 2em;
+  color: #fff;
+}
+.experience .content ul {
+  padding: 50px 0;
+  list-style-type: none;
+}
+.experience .content ul li {
+  background: #f5f5f5;
+  position: relative;
+  margin-left: 20px;
+  width: 5px;
+  padding-bottom: 40px;
+}
+.experience .content ul li:last-child {
+  padding-bottom: 7px;
+}
+.experience .content ul li:before {
+  content: '';
+  background: #002440;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 4px solid #f5f5f5;
+}
+.experience .content ul li .hidden {
+  opacity: 0;
+  margin-left: 10vw;
+}
+.experience .content ul li .experience-content {
+  background: #f5f5f5;
+  position: relative;
+  top: 7px;
+  left: 48px;
+  width: calc(100vw - 100px);
+  padding: 20px;
+  text-align: center;
+  -webkit-border-radius: 0 5px 5px;
+  -moz-border-radius: 0 5px 5px;
+  border-radius: 0 5px 5px;
+}
+.experience .content ul li .experience-content h2 {
+  font-size: 1.5em;
+  color: #3c3c3c;
+  padding-bottom: 10px;
+}
+.experience .content ul li .experience-content .experience-time {
+  color: #777;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+.experience .content ul li .experience-content p {
+  color: #1a1a1a;
+  font-size: .95em;
+}
+.experience .content ul li .experience-content:before {
+  content: '';
+  background: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 35px;
+  height: 5px;
+}
+
+
+/*##### SKILLS SECTION #####*/
+.skills {
+  padding: 70px 20px;
+}
+.skills .content .development-wrapper .development-title {
+  color: #3c3c3c;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skills .content .development-wrapper .skills-bar-container {
+  position: relative;
+  width: 100%;
+  list-style-type: none;
+}
+.skills .content .development-wrapper .skills-bar-container li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title {
+  color: #3c3c3c;
+  margin-bottom: 5px;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
+  display: inline-block;
+}
+.skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
+  position: absolute;
+  right: 20px;
+  font-size: 1.1em;
+}
+.skills .content .development-wrapper .skills-bar-container li .bar-container {
+  background: #ececec;
+  position: relative;
+  width: 100%;
+  height: 10px;
+}
+.skills .content .development-wrapper .skills-bar-container li .bar-container .progressbar {
+  background: #34495e;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+}
+.skills .content .tools-knowledge-wrapper {
+  width: 100%;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+  position: relative;
+  padding: 20px 0;
+  widht: 100%;
+  text-align: center;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper .title,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper .title {
+  color: #3c3c3c;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul li,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li {
+  color: #444;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: left;
+}
+.skills .content .tools-knowledge-wrapper .tools-wrapper ul li i,
+.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li i {
+  color: #27ae60;
+}
+
+/*##### RESUME SECTION #####*/
+.resume {
+  background: url("https://source.unsplash.com/L8126OwlroY/");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.resume .content {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px 0;
+  text-align: center;
+}
+.resume .content a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.resume .content a .btn-resume {
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 20px;
+  margin: 0 15px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.resume .content a .btn-resume span {
+  -webkit-transition: opacity 1.2s;
+  -moz-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+}
+.resume .content a .btn-resume i {
+  color: #fff;
+  position: absolute;
+  padding: 20px 0;
+  top: -80px;
+  width: 100%;
+  left: 0;
+  -webkit-transition: top .5s;
+  -moz-transition: top .5s;
+  transition: top .5s;
+}
+.resume .content a .btn-resume:hover span {
+  opacity: 0;
+  -webkit-transition: opacity .4s;
+  -moz-transition: opacity .4s;
+  transition: opacity .4s;
+}
+.resume .content a .btn-resume:hover i {
+  top: 0;
+}
+
+/*##### PORTFOLIO SECTION #####*/
+.portfolio {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+.portfolio .content {
+  text-align: center;
+}
+.portfolio .content h1 {
+  color: #3c3c3c;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+.portfolio .content .projects {
+  width: 100%;
+}
+.portfolio .content .projects .project {
+  color: #fff;
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+.portfolio .content .projects .project:last-child {
+  margin-bottom: 0;
+}
+.portfolio .content .projects .project .project-image img {
+  width: 100%;
+}
+.portfolio .content .projects .project .project-title {
+  color: #3c3c3c;
+  padding: 10px 0;
+}
+.portfolio .content .projects .project .project-description {
+  color: #444;
+}
+
+/*##### CONTACT SECTION #####*/
+.contact {
+  padding: 30px 0;
+}
+.contact .socials {
+  list-style-type: none;
+  width: 100%;
+}
+.contact .socials .social {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.contact .socials .social a {
+  color: #3d3d3d;
+  font-size: 1.5em;
+  -webkit-transition: color .3s;
+  -moz-transition: color .3s;
+  transition: color .3s;
+}
+.contact .socials .social .email:hover {
+  color: #c8a028;
+}
+.contact .socials .social .twitter:hover {
+  color: #57AEE7;
+}
+.contact .socials .social .linkedin:hover {
+  color: #0177B5;
+}
+.contact .socials .social .codepen:hover {
+  color: #707070;
+}
+.contact .clear {
+  clear: both;
+}
+
+.footer {
+  padding: 25px 0;
+  text-align: center;
+}
+.footer p {
+  color: #777;
+  font-size: 1.1em;
+}
+.footer i {
+  color: #e74c3c;
+}
+
+/* ############################
+        RESPONSIVE
+############################### */
+@media screen and (min-width: 480px) {
+  .skills .content .tools-knowledge-wrapper .tools-wrapper,
+  .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+    width: 50%;
+    float: left;
+    padding: 0;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
+  .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+    margin-left: 0;
+  }
+  .skills .content .clear {
+    clear: both;
+  }
+}
+@media screen and (min-width: 640px) {
+  .about-myself {
+    padding: 100px 40px;
+  }
+
+  .skills {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .skills .content .development-wrapper {
+    width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .skills .content .tools-knowledge-wrapper {
+    width: 600px;
+    margin: auto;
+  }
+
+  .contact .content .socials {
+    width: 600px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .experience .content ul li {
+    margin: 0 auto;
+  }
+  .experience .content ul li .experience-content {
+    width: 40vw;
+  }
+  .experience .content ul li:nth-child(odd) .experience-content {
+    left: 63px;
+  }
+  .experience .content ul li:nth-child(odd) .experience-content:before {
+    left: -50px;
+    width: 50px;
+  }
+  .experience .content ul li:nth-child(even) .experience-content {
+    left: calc(-40vw - 57px);
+    -webkit-border-radius: 5px 0px 5px 5px;
+    -moz-border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 0px 5px 5px;
+  }
+  .experience .content ul li:nth-child(even) .experience-content:before {
+    left: auto;
+    right: -50px;
+    width: 50px;
+  }
+  .experience .content ul li:nth-child(odd) .hidden {
+    margin-left: 10vw;
+  }
+  .experience .content ul li:nth-child(even) .hidden {
+    margin-left: -10vw;
+  }
+
+  .skills {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .skills .content {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .skills .content .development-wrapper,
+  .skills .content .tools-knowledge-wrapper {
+    float: left;
+  }
+  .skills .content .development-wrapper {
+    margin-bottom: 0;
+    width: 60%;
+  }
+  .skills .content .tools-knowledge-wrapper {
+    width: 40%;
+    margin-top: 60px;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper,
+  .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+    float: none;
+    margin: auto;
+  }
+  .skills .content .tools-knowledge-wrapper .tools-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .portfolio .content .projects .project {
+    position: relative;
+    margin: auto;
+    margin-bottom: 3%;
+    width: 680px;
+    height: 450px;
+    overflow: hidden;
+  }
+  .portfolio .content .projects .project:hover .project-image {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  .portfolio .content .projects .project:hover .project-title, .portfolio .content .projects .project:hover .project-description {
+    opacity: 1;
+  }
+  .portfolio .content .projects .project .project-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    z-index: 3;
+    overflow: hidden;
+  }
+  .portfolio .content .projects .project .project-image img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  .portfolio .content .projects .project .project-title,
+  .portfolio .content .projects .project .project-description {
+    position: absolute;
+    height: 50%;
+    opacity: 0;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    overflow: hidden;
+  }
+  .portfolio .content .projects .project .project-title {
+    width: 50%;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    display: table;
+  }
+  .portfolio .content .projects .project .project-title h2 {
+    font-size: 2em;
+    text-decoration: underline;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .portfolio .content .projects .project .project-description {
+    width: 100%;
+    top: 50%;
+    left: 0;
+    padding: 25px 10px;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body translate="no">
+<section class="hero">
+<div class="content">
+<div class="header">
+<h1>Shaily Sutaria Portfolio</h1>
+</div>
+</div>
+</section>
+<section class="about-myself">
+<div class="content">
+<h2>Hello !! 🙋</h2>
+<p>I'm <span>Shaily Sutaria. </span> I am studing UI/UX and Web Designing at <span>UC-Santa Cruz, California</span>.</p>
+<p>I am looking for <span>full time/internship/co-op roles </span>to design, develop and test experiences that make people's lives simple.</p>
+</div>
+</section>
+
+<section class="experience">
+<div class="content">
+<h1>Experience</h1>
+<ul>
+<li>
+<div class="experience-content hidden">
+<h2>Chico's, Palo Alto</h2>
+<h3>Associate</h3>
+<div class="experience-time">Aug - Dec 2019</div>
+<p>Helped in meeting company sales goals by utilizing sales techniques and communicating product knowledge to the customer; recommends merchandise selections or helps to locate or obtain merchandise based on customer needs and desires.</p>
+<p>Participated in visual directives including monthly store sets and zone maintenance.</p>
+<p>Ensured a fast and efficient register experience, remaining current on policies regarding payments, coupon acceptance, returns and exchanges and security practices.</p>
+<p>Maintained consistent client communication through utilization of customer book.</p>
+<p>Assisted with visual directives, including floor sets, window changes, visual presentations, signage placement, etc. as directed.</p>
+</div>
+</li>
+<li>
+<div class="experience-content hidden">
+<h2>Shails & Pals</h2>
+<h3>Co-founder and CEO</h3>
+<div class="experience-time">Apr 2008 - Dec 2018</div>
+<p>Co-founded company and lead team of 10-15 people to serve more than 500 customers across globe for more than 10 years.</p>
+<p>Designed exquisite fashion items in line with brand's aesthetic for Gujarati culture.</p>
+<p>Managed entire product design process, from initial market research to mood board creation to sketching/designing to delivering end product.</p>
+<p>Oversaw technical designs of products from concept to factory, incl. fabric and trim selection, meeting and selecting vendors, etc.</p>
+</div>
+</li>
+<li>
+<div class="experience-content hidden">
+<h2>Resham Dresses</h2>
+<h3>Associate Designer</h3>
+<div class="experience-time">May 2007 - Apr 2008</div>
+<p>Created commercial designs that reflected the conceptual direction and business strategy of the company.</p>
+<p>Collaborated and followed-up on deliverables with vendors and key partners throughout the entire design process, incl. merchandising, preproduction, and product development.</p>
+</div>
+</li>
+<li>
+<div class="experience-content hidden">
+<h2>Roops Enterprise</h2>
+<h3>Intern</h3>
+<div class="experience-time">Jan - Mar 2007</div>
+<p>Participated in the production and design training and on color matching for quality control.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="skills">
+<div class="content">
+<div class="development-wrapper">
+<h2 class="development-title">Software</h2>
+<ul class="skills-bar-container">
+<li>
+<div class="progressbar-title">
+<h3>Adobe Illustrator</h3>
+<span class="percent" id="php-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="80">
+<span class="progressbar" id="progress-php"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>Adobe Photoshop</h3>
+<span class="percent" id="angular-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="60">
+<span class="progressbar" id="progress-angular"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>Adobe Spark</h3>
+<span class="percent" id="angular-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="60">
+<span class="progressbar" id="progress-angular"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>Adobe Sketch</h3>
+<span class="percent" id="angular-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="60">
+<span class="progressbar" id="progress-angular"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>HTML5</h3>
+<span class="percent" id="html-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="80">
+<span class="progressbar" id="progress-html"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>CSS</h3>
+<span class="percent" id="css-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="70">
+<span class="progressbar" id="progress-css"></span>
+</div>
+</li>
+<li>
+<div class="progressbar-title">
+<h3>JavaScript</h3>
+<span class="percent" id="javascript-pourcent"></span>
+</div>
+<div class="bar-container" data-percent="60">
+<span class="progressbar" id="progress-javascript"></span>
+</div>
+</li>
+</ul>
+</div>
+<div class="tools-knowledge-wrapper">
+<div class="tools-wrapper">
+<h2 class="title">Tools</h2>
+<ul class="tools">
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Photoshop
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Adobe Illustrator
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Sublime text
+</li>
+</ul>
+</div>
+<div class="knowledge-wrapper">
+<h2 class="title">Knowledge</h2>
+<ul class="knowledge">
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Wireframing
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Responsive design
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Prototyping
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+Sketching
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+User surveys
+</li>
+<li>
+<i class="fa fa-check" aria-hidden="true"></i>
+User testing
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</section>
+
+<section class="resume">
+<div class="content">
+<a href="resume/Shaily-Sutaria.pdf" target="_blank">
+<div class="btn-resume">
+<i class="fa fa-download fa-2x" aria-hidden="true"></i>
+<span>Download my resume<span>
+</div>
+</a>
+</div>
+</section>
+
+<!--
+<section class="portfolio">
+<div class="content">
+<h1>Some works</h1>
+<div class="projects">
+<div class="project">
+<div class="project-image">
+<img src="https://source.unsplash.com/WLUHO9A_xik/" alt="" />
+</div>
+<div class="project-title">
+<h2>Project #1</h2>
+</div>
+<div class="project-description">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi asperiores odio libero, molestiae at suscipit totam sequi, delectus temporibus. Provident itaque illum animi cupiditate quaerat! Id inventore, excepturi sequi totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iure ex repudiandae, enim maxime.</p>
+</div>
+</div>
+<div class="project">
+<div class="project-image">
+<img src="https://source.unsplash.com/jd0hS7Vhn_A" alt="" />
+</div>
+<div class="project-title">
+<h2>Project #2</h2>
+</div>
+<div class="project-description">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi magni consequatur dolores distinctio quod accusamus voluptatum obcaecati animi expedita rem odio explicabo veritatis voluptas ducimus voluptate earum laborum, qui maiores doloremque deserunt sapiente corporis et culpa, nihil fuga. Sit nemo maxime itaque maiores iure, similique ratione veritatis quidem nulla explicabo.</p>
+</div>
+</div>
+<div class="project">
+<div class="project-image">
+<img src="https://source.unsplash.com/AyYW_bUWerc/" alt="" />
+</div>
+<div class="project-title">
+<h2>Project #3</h2>
+</div>
+<div class="project-description">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi asperiores odio libero, molestiae at suscipit totam sequi, delectus temporibus. Provident itaque illum animi cupiditate quaerat! Id inventore, excepturi sequi totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iure ex repudiandae, enim maxime.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+-->
+<section class="contact">
+<div class="content">
+<ul class="socials">
+<li class="social">
+<a href="shah.shaily22@gmail.com" target="_blank" class="email">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</a>
+</li>
+<li class="social">
+<a href="https://www.linkedin.com/in/shaily-sutaria-839135184/" target="_blank" class="linkedin">
+<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+</a>
+</li>
+<li class="social">
+<a href="#" target="_blank" class="codepen">
+<i class="fa fa-codepen" aria-hidden="true"></i>
+</a>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+</section>
+<section class="footer">
+<p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by Shaily</p>
+</section>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script id="rendered-js">
+$( document ).ready(function() {
+  // Main variables
+    var $aboutTitle = $('.about-myself .content h2');
+    var $developmentWrapper = $('.development-wrapper');
+    var developmentIsVisible = false;
+
+
+  /* ####### HERO SECTION ####### */
+
+  $('.hero .content .header').delay(500).animate({
+    'opacity':'1',
+    'top': '50%'
+  },1000);
+
+
+  $(window).scroll( function(){
+
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+    /* ##### ABOUT MYSELF SECTION #### */
+    if( bottom_of_window > ($aboutTitle.offset().top + $aboutTitle.outerHeight())){
+      $('.about-myself .content h2').addClass('aboutTitleVisible');
+    } 
+  /* ##### EXPERIENCE SECTION #### */
+
+      // Check the location of each element hidden */
+      $('.experience .content .hidden').each( function(i){
+
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+
+          /* If the object is completely visible in the window, fadeIn it */
+          if( bottom_of_window > bottom_of_object ){
+
+            $(this).animate({
+              'opacity':'1',
+              'margin-left': '0'
+            },600);
+          }
+      });
+
+  /*###### SKILLS SECTION ######*/
+
+    var middle_of_developmentWrapper = $developmentWrapper.offset().top + $developmentWrapper.outerHeight()/2;
+
+    if((bottom_of_window > middle_of_developmentWrapper)&& (developmentIsVisible == false)){
+
+      $('.skills-bar-container li').each( function(){
+
+        var $barContainer = $(this).find('.bar-container');
+        var dataPercent = parseInt($barContainer.data('percent'));
+        var elem = $(this).find('.progressbar');
+        var percent = $(this).find('.percent');
+        var width = 0;
+
+        var id = setInterval(frame, 15);
+
+        function frame() {
+          if (width >= dataPercent) {
+              clearInterval(id);
+          } else {
+            width++;
+            elem.css("width", width+"%");
+            percent.html(width+" %");
+          }
+        }
+      });
+      developmentIsVisible = true;
+    }
+  }); // -- End window scroll --
+});
+    </script>
 </body>
+</html>
