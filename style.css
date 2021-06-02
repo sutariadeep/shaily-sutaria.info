@@ -21,7 +21,8 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #011640;
+  /*color: inherit;*/
   text-decoration: none;
 }
 
@@ -29,6 +30,41 @@ section {
   position: relative;
   width: 100%;
 }
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 75px;
+  background-color: #fff;
+  box-shadow: 0 1rem 1rem -1rem rgba(55, 56, 58, 0.2);
+  z-index: 10;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+nav li {
+  padding: 0px 0.8rem;
+}
+
+nav .code {
+  color: white;
+  transition: color 0.3s ease-out;
+}
+
+nav a:hover .code {
+  color: #F2797B;
+}
+
 
 /*##### HERO SECTION #####*/
 .hero {
